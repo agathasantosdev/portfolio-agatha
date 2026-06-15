@@ -279,18 +279,11 @@
 
         .sobre-card {
             display: none;
-
             background: white;
-
             padding: 25px;
-
             border-radius: 20px;
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, .08);
-
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
             text-align: left;
-
             animation: fade .4s ease;
         }
 
@@ -460,6 +453,26 @@
             background: #38207c;
 
             transform: scale(1.05);
+
+        }
+
+        .sobre-foto {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #4d2f9e;
+            box-shadow: 0 10px 30px rgba(77, 47, 158, .2);
+        }
+
+        .sobre-texto p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .sobre-texto p:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -507,13 +520,13 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero" id="hero">
 
         <div class="container">
 
             <div class="row align-items-center">
 
-                <!-- ESQUERDA -->
+                <!-- TEXTO -->
                 <div class="col-lg-6">
 
                     <h1>
@@ -526,56 +539,23 @@
                         em usabilidade e performance.
                     </p>
 
-                    <button class="btn btn-main" onclick="abrirSobre()">
-    Sobre Mim
-</button>
-                    
-<div class="col-lg-6">
+                    <button class="btn btn-main" data-bs-toggle="modal" data-bs-target="#sobreModal">
 
+                        Sobre Mim
 
-    <div class="sobre-card d-block">
+                    </button>
 
-        <h3 class="mb-4">
-            Sobre Mim
-        </h3>
+                </div>
 
-        <div class="row">
-
-            <div class="col-md-6">
-                <p><strong>Nome:</strong> Ágatha Teodoro Santos</p>
-                <p><strong>Cidade:</strong> Botucatu - SP</p>
-                <p><strong>Ocupação:</strong> Estudante</p>
-            </div>
-
-            <div class="col-md-6">
-                <p><strong>E-mail:</strong> agatha.erika06@gmail.com</p>
-                <p><strong>Interesses:</strong> Música, Teatro e Tecnologia</p>
-            </div>
-
-        </div>
-
-        <p class="mt-3">
-            Sou estudante de Análise e Desenvolvimento de Sistemas e possuo
-            conhecimentos em HTML, CSS, JavaScript, Bootstrap, Figma e MySQL.
-
-            Busco desenvolver projetos modernos, intuitivos e focados na
-            experiência do usuário, unindo design e funcionalidade para criar
-            soluções digitais eficientes.
-        </p>
-
-    </div>
-
-</div>
-
-                <!-- DIREITA -->
-
+                <!-- FOTO -->
                 <div class="col-lg-6 text-center">
 
-                    <img src="NegocioExposto/imagens/image.png" class="profile-img">
+                    <img src="NegocioExposto/imagens/image.png" class="profile-img img-fluid" alt="Ágatha Santos">
 
                 </div>
 
             </div>
+
         </div>
 
     </section>
@@ -658,7 +638,7 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Habilidades</h2>
+                <h2>Hard skills</h2>
                 <p>Tecnologias Utilizadas</p>
             </div>
             <div class="row g-4">
@@ -740,6 +720,92 @@
         </div>
     </section>
 
+    <section id="soft-skills" class="py-5 bg-light">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Soft skills</h2>
+                <p>Competências comportamentais</p>
+            </div>
+            <div class="row g-4">
+
+                <!-- FRONT-END -->
+                <div class="col-md-4">
+                    <div class="accordion custom-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#comunica">
+                                    Comunicação e Colaboração
+                                </button>
+                            </h2>
+
+                            <div id="comunica" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Comunicação efetiva </li>
+                                        <li>Trabalho equipe</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BACK-END -->
+                <div class="col-md-4">
+                    <div class="accordion custom-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#equipe">
+                                    Produtividade
+                                </button>
+                            </h2>
+
+                            <div id="equipe" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Criatividade</li>
+                                        <li>Iniciativa </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FERRAMENTAS -->
+                <div class="col-md-4">
+                    <div class="accordion custom-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#dialogo">
+                                    Comportamento Profissional
+                                </button>
+                            </h2>
+
+                            <div id="dialogo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Responsabilidade</li>
+                                        <li>Organização</li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
 
     <section id="projetos">
 
@@ -770,13 +836,13 @@
                     </div>
 
                     <div class="carousel-item">
-                        <img src="NegocioExposto/imagens/carrosel.png" class="d-block w-100 projeto-img" data-bs-toggle="modal"
-                            data-bs-target="#modalProjeto2">
+                        <img src="NegocioExposto/imagens/carrosel.png" class="d-block w-100 projeto-img"
+                            data-bs-toggle="modal" data-bs-target="#modalProjeto2">
                     </div>
 
                     <div class="carousel-item">
-                        <img src="NegocioExposto/imagens/brasil.png" class="d-block w-100 projeto-img" data-bs-toggle="modal"
-                            data-bs-target="#modalProjeto3">
+                        <img src="NegocioExposto/imagens/brasil.png" class="d-block w-100 projeto-img"
+                            data-bs-toggle="modal" data-bs-target="#modalProjeto3">
                     </div>
 
                     <div class="carousel-item">
@@ -1115,7 +1181,7 @@
                             <option>Sistema Web</option>
                             <option>Formulário</option>
                             <option>UI Design</option>
-                            
+
                         </select>
 
                         <select class="form-control mb-3" name="site">
@@ -1164,13 +1230,88 @@
 
     </section>
 
+    <div class="modal fade" id="sobreModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content sobre-modal">
+
+                <div class="modal-header border-0">
+                    <h3 class="modal-title">
+                        Sobre Mim
+                    </h3>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="text-center mb-4">
+                        <img src="NegocioExposto/imagens/image.png" class="sobre-foto">
+                    </div>
+
+                    <div class="row g-3 mb-4">
+
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <strong>Nome</strong>
+                                <span>Ágatha Teodoro Santos</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <strong>Cidade</strong>
+                                <span>Botucatu - SP</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <strong>Ocupação</strong>
+                                <span>Estudante</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <strong>E-mail</strong>
+                                <span>agatha.erika06@gmail.com</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sobre-texto">
+
+                        <strong>Quem sou eu?</strong>
+
+                        <p>
+                            Sou uma estudante de Análise e Desenvolvimento de Sistemas,
+                            com conhecimentos em HTML, CSS, JavaScript,
+                            Bootstrap, Figma e MySQL, buscando sempre criar
+                            interfaces modernas, intuitivas e responsivas.
+                        
+                            Meu objetivo é unir criatividade e tecnologia para
+                            desenvolver soluções digitais que proporcionem uma
+                            excelente experiência aos usuários.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <footer>
 
         <div class="social mb-3">
 
             <a href="https://github.com/agathasantosdev"><i class="bi bi-github"></i></a>
 
-            <a href="https://www.linkedin.com/in/agatha-teodoro-santos-undefined-313979416/"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/agatha-teodoro-santos-undefined-313979416/"><i
+                    class="bi bi-linkedin"></i></a>
 
             <a href="#"><i class="bi bi-instagram"></i></a>
 
@@ -1186,23 +1327,17 @@
     <script>
 
         function abrirSobre() {
-
-            const card =
-                document.getElementById("sobreCard");
+            const card = document.getElementById("sobreCard");
 
             if (card.style.display === "block") {
-
                 card.style.display = "none";
-
             } else {
-
                 card.style.display = "block";
-
             }
-
         }
 
     </script>
+
 </body>
 
 </html>
